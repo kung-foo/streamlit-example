@@ -6,6 +6,8 @@ import requests
 ctx = st.report_thread.get_report_ctx()
 session_info = Server.get_current()._get_session_info(ctx.session_id)
 
+st.write(session_info.ws.request.headers)
+
 cookie = SimpleCookie(session_info.ws.request.headers.get("Cookie")).get(
     "streamlit_token"
 )
