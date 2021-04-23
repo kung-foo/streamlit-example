@@ -15,4 +15,4 @@ if not cookie:
     st.write("Cookie named `streamlit_token` not found.")
     st.stop()
 
-st.write(session_info.ws.request.headers.get("Cookie"))
+st.write(cookie.value)
