@@ -10,18 +10,20 @@ components.html("""
 <script>
 console.log(document.cookie);
 
-$.ajax({
-    url: "https://share.streamlit.io/api/v1/user",
-    type: "GET",
-    crossDomain: true,
-    dataType: "json",
-    success: function (response) {
-        var resp = JSON.parse(response)
-        alert(resp.status);
-    },
-    error: function (xhr, status) {
-        alert("error");
-    }
+$(function() {
+    $.ajax({
+        url: "https://share.streamlit.io/api/v1/user",
+        type: "GET",
+        crossDomain: true,
+        dataType: "json",
+        success: function (response) {
+            var resp = JSON.parse(response)
+            alert(resp.status);
+        },
+        error: function (xhr, status) {
+            alert("error");
+        }
+    });
 });
 
 </script>
