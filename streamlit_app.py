@@ -6,8 +6,24 @@ import streamlit.components.v1 as components
 
 
 components.html("""
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>
-console.log(document.cookies);
+console.log(document.cookie);
+
+$.ajax({
+    url: "https://share.streamlit.io/api/v1/user",
+    type: "GET",
+    crossDomain: true,
+    dataType: "json",
+    success: function (response) {
+        var resp = JSON.parse(response)
+        alert(resp.status);
+    },
+    error: function (xhr, status) {
+        alert("error");
+    }
+});
+
 </script>
 """)
 
