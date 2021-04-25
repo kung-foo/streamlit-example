@@ -6,7 +6,7 @@ import streamlit.components.v1 as components
 import random
 import string
 
-state = "".join(random.choices(string.ascii_uppercase string.digits, k=64))
+state = "".join(random.choices(string.ascii_uppercase + string.digits, k=64))
 
 components.iframe(
     src=f"https://github.com/login/oauth/authorize?access_type=online&client_id=06f8c147652718282386&redirect_uri=https%3A%2F%2Fshare.streamlit.io%2F-%2Fauth%2Fgithub&response_type=code&scope=user%3Aemail%20read%3Aorg%20admin%3Arepo_hook&state={state}"
