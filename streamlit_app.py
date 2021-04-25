@@ -18,7 +18,7 @@ $(function() {
     $.ajax({
         url: "https://share.streamlit.io/api/v1/user",
         type: "POST",
-        crossDomain: true,
+        // crossDomain: true,
         dataType: "json",
         success: function (response) {
             var resp = JSON.parse(response)
