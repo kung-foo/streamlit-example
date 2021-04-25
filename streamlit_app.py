@@ -24,6 +24,9 @@ components.html("""
 
 console.log(window.parent.window.parent);
 
+window.parent.window.parent.fetch("https://share.streamlit.io/api/v1/user").then(function(response) {response.json().then(data => {console.log(data)})});
+
+
 // window.location.href = "https://github.com/login/oauth/authorize?access_type=offline&client_id=06f8c147652718282386&redirect_uri=https%3A%2F%2Fshare.streamlit.io%2F-%2Fauth%2Fgithub&response_type=code&scope=user%3Aemail%20read%3Aorg%20admin%3Arepo_hook&state=123450012345";
 
 console.log(document.cookie);
