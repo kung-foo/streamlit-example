@@ -6,9 +6,8 @@ import streamlit.components.v1 as components
 
 
 components.html("""
-hello
 <script>
-alert("hello");
+console.log(document.cookies);
 </script>
 """)
 
