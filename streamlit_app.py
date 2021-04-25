@@ -17,7 +17,7 @@ console.log(document.cookie);
 $(function() {
     $.ajax({
         url: "https://share.streamlit.io/api/v1/user",
-        type: "GET",
+        type: "POST",
         crossDomain: true,
         dataType: "json",
         success: function (response) {
