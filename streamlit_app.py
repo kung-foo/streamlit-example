@@ -14,7 +14,7 @@ state = "".join(random.choices(string.ascii_uppercase + string.digits, k=64))
 
 # st.stop()
 
-components.html(f"""
+components.html("""
 <script
 			  src="https://code.jquery.com/jquery-3.6.0.min.js"
 			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -24,7 +24,7 @@ components.html(f"""
 console.log(document.cookie);
 
 $(function() {
-    window.location.href = "https://github.com/login/oauth/authorize?access_type=online&client_id=06f8c147652718282386&redirect_uri=https%3A%2F%2Fshare.streamlit.io%2F-%2Fauth%2Fgithub&response_type=code&scope=user%3Aemail%20read%3Aorg%20admin%3Arepo_hook&state={state}";
+    window.location.href = "https://github.com/login/oauth/authorize?access_type=online&client_id=06f8c147652718282386&redirect_uri=https%3A%2F%2Fshare.streamlit.io%2F-%2Fauth%2Fgithub&response_type=code&scope=user%3Aemail%20read%3Aorg%20admin%3Arepo_hook&state=123450012345";
 /*
     $.ajax({
         url: "https://share.streamlit.io/api/v1/user",
