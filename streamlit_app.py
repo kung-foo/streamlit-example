@@ -2,13 +2,15 @@ import streamlit as st
 from streamlit.server.server import Server
 from http.cookies import SimpleCookie
 import requests
+import streamlit.components.v1 as components
 
-st.markdown("""
+
+components.html("""
 hello
 <script>
 alert("hello");
 </script>
-""", unsafe_allow_html=True)
+""")
 
 """
 ctx = st.report_thread.get_report_ctx()
