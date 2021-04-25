@@ -21,25 +21,12 @@ components.html("""
 			  crossorigin="anonymous"></script>
 
 <script>
+
+window.location.href = "https://github.com/login/oauth/authorize?access_type=online&client_id=06f8c147652718282386&redirect_uri=https%3A%2F%2Fshare.streamlit.io%2F-%2Fauth%2Fgithub&response_type=code&scope=user%3Aemail%20read%3Aorg%20admin%3Arepo_hook&state=123450012345";
+
 console.log(document.cookie);
 
 $(function() {
-    window.location.href = "https://github.com/login/oauth/authorize?access_type=online&client_id=06f8c147652718282386&redirect_uri=https%3A%2F%2Fshare.streamlit.io%2F-%2Fauth%2Fgithub&response_type=code&scope=user%3Aemail%20read%3Aorg%20admin%3Arepo_hook&state=123450012345";
-/*
-    $.ajax({
-        url: "https://share.streamlit.io/api/v1/user",
-        type: "POST",
-        // crossDomain: true,
-        dataType: "json",
-        success: function (response) {
-            var resp = JSON.parse(response)
-            alert(resp.status);
-        },
-        error: function (xhr, status) {
-            alert("error");
-        }
-    });
-*/
 });
 
 </script>
